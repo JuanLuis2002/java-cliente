@@ -1,4 +1,4 @@
-name: Deploy JAVA CLIENTE App to VPS (no git)
+name: Deploy JAVA CLIENTE App to VPS (git)
 
 on:
   push:
