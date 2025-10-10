@@ -1,4 +1,4 @@
-name: Deploy JAVA CLIENTE App to VPS (git)
+name: Deploy JAVA CLIENTE App to VPS (no git)
 
 on:
   push:
@@ -30,6 +30,13 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
            cd /home/Cliente/docker-cliente
+           cd /home/Cliente/docker-cliente
+           echo "=== DEBUG: Verificando archivos ==="
+           ls -la
+           echo "=== DEBUG: Verificando si existe build.gradle ==="
+           ls -la build.gradle
+           echo "=== DEBUG: Verificando estructura de src ==="
+           find src -type f | head -10
            docker stop cliente-container || true
            docker rm cliente-container || true
            docker rmi mi-cliente || true
