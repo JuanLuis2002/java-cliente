@@ -34,5 +34,5 @@ jobs:
            docker rm cliente-container || true
            docker rmi mi-cliente || true
            docker build -t mi-cliente .
-           docker run -d --name cliente-container --network host -p 8090:8090 mi-cliente
+           docker run -d --name cliente-container -p 8090:8090 mi-cliente
            docker ps -a
