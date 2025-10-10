@@ -35,4 +35,4 @@ jobs:
            docker rmi mi-cliente || true
            docker build -t mi-cliente .
            docker run -d --name cliente-container -p 8090:8090 mi-cliente
-           docker ps
+           docker ps -a
