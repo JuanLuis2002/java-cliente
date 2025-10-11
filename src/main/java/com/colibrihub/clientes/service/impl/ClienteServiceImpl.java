@@ -53,7 +53,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     private void enviarClienteExterno(ClienteDto dto) {
         webClient.post()
-        .uri("http://217.76.61.206:8091/clientes/notification") // Cambia esta URL
+        .uri("http://217.76.61.206:8091/api/clientes/notification") // Cambia esta URL
         .contentType(MediaType.APPLICATION_JSON)
         .bodyValue(dto)
         .retrieve()
