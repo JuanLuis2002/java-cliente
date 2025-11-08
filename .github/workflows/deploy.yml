@@ -34,5 +34,5 @@ jobs:
            docker rm cliente-container || true
            docker rmi mi-cliente || true
            docker build -t mi-cliente .
-           docker run -d --name cliente-container -p 8090:8090 --memory="512m" mi-cliente
+           docker run -d --name cliente-container --network frontend-net -p 8090:8090 --memory="512m" mi-cliente
            docker ps -a
